@@ -15,13 +15,11 @@
   html, body { width: 100%; background: #ffffff; }
   body { font-family: 'DM Sans', sans-serif; color: var(--black); font-size: 17px; }
 
-  /* Stats bar */
   .stats-bar { display: flex; gap: 2.5rem; padding: 1.1rem 2rem; background: var(--black); width: 100%; }
   .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--white); }
-  .stat-label { font-size: 13px; color: var(--gray-3); letter-spacing: 0.04em; margin-top: 2px; }
+  .stat-label { font-size: 12px; color: var(--gray-3); letter-spacing: 0.04em; margin-top: 2px; }
   .stat-divider { width: 1px; height: 32px; background: #2a2a2a; align-self: center; }
 
-  /* Search */
   .search-wrap { padding: 1.1rem 2rem; background: var(--gray-1); border-bottom: 1px solid var(--gray-2); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; width: 100%; }
   .search-box { flex: 1; max-width: 460px; display: flex; align-items: center; gap: 10px; background: var(--white); border: 1px solid var(--gray-2); padding: 0 16px; height: 46px; border-radius: 3px; }
   .search-box input { border: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--black); background: transparent; flex: 1; }
@@ -35,22 +33,21 @@
   .cache-badge { font-size: 12px; color: var(--gray-3); }
   .cache-badge.fresh { color: #166534; }
 
-  /* Layout */
   .layout { display: grid; grid-template-columns: 260px 1fr; min-height: 500px; width: 100%; background: #ffffff; }
+
+  /* Sidebar — bold dan jelas */
   .sidebar { border-right: 1px solid var(--gray-2); padding: 2rem 0; background: #ffffff; }
   .sidebar-heading { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-3); padding: 0 1.5rem; margin-bottom: 10px; font-weight: 500; }
-  .sidebar-item { display: flex; align-items: center; justify-content: space-between; padding: 11px 1.5rem; font-size: 15px; color: var(--gray-4); cursor: pointer; border-left: 2px solid transparent; transition: all 0.15s; }
-  .sidebar-item:hover { color: var(--black); background: var(--gray-1); }
-  .sidebar-item.active { color: var(--black); font-weight: 500; border-left-color: var(--red); background: var(--gray-1); }
-  .sidebar-count { font-size: 13px; color: var(--gray-3); background: var(--gray-1); padding: 2px 9px; border-radius: 10px; }
+  .sidebar-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 1.5rem; font-size: 15px; font-weight: 600; color: var(--black); cursor: pointer; border-left: 3px solid transparent; transition: all 0.15s; }
+  .sidebar-item:hover { color: var(--red); background: var(--gray-1); }
+  .sidebar-item.active { color: var(--red); font-weight: 700; border-left-color: var(--red); background: var(--gray-1); }
+  .sidebar-count { font-size: 12px; color: var(--gray-3); background: var(--gray-2); padding: 2px 9px; border-radius: 10px; font-weight: 400; }
 
-  /* Content */
   .content { padding: 2rem 2.5rem; background: #ffffff; }
   .content-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-2); }
   .content-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; color: var(--black); }
   .content-count { font-size: 14px; color: var(--gray-3); }
 
-  /* Table */
   .doc-table { width: 100%; border-collapse: collapse; background: #ffffff; }
   .doc-table th { text-align: left; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-3); font-weight: 500; padding: 0 14px 14px; border-bottom: 1px solid var(--gray-2); }
   .doc-table th:first-child { padding-left: 0; }
@@ -70,15 +67,12 @@
   .doc-category { font-size: 14px; color: var(--gray-4); }
   .doc-date { font-size: 14px; color: var(--gray-3); }
   .doc-version { font-size: 13px; color: var(--gray-4); background: var(--gray-1); border: 1px solid var(--gray-2); padding: 4px 10px; border-radius: 3px; font-family: monospace; }
-
-  /* Butang muat turun — sentiasa nampak */
   .doc-actions { display: flex; gap: 8px; }
   .btn-action { display: flex; align-items: center; gap: 5px; padding: 7px 14px; font-size: 13px; font-weight: 500; border-radius: 3px; cursor: pointer; border: 1px solid var(--gray-2); background: var(--white); color: var(--gray-4); transition: all 0.12s; font-family: 'DM Sans', sans-serif; text-decoration: none; }
   .btn-action:hover { background: var(--black); color: var(--white); border-color: var(--black); }
   .btn-action.primary { background: var(--red); color: var(--white); border-color: var(--red); }
   .btn-action.primary:hover { background: var(--red-dark); }
 
-  /* Skeleton */
   .skeleton { background: linear-gradient(90deg, var(--gray-2) 25%, var(--gray-1) 50%, var(--gray-2) 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: 3px; }
   .sk-icon { width: 42px; height: 42px; border-radius: 4px; flex-shrink: 0; }
   .sk-text { height: 15px; border-radius: 2px; }
@@ -88,7 +82,7 @@
   .state-box { display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; gap: 12px; }
   .state-title { font-size: 16px; font-weight: 500; color: var(--gray-4); }
   .state-sub { font-size: 14px; color: var(--gray-3); text-align: center; }
-  .sk-sidebar { padding: 11px 1.5rem; display: flex; justify-content: space-between; }
+  .sk-sidebar { padding: 12px 1.5rem; display: flex; justify-content: space-between; }
 </style>
 </head>
 <body>
@@ -148,9 +142,9 @@
         <thead><tr>
           <th style="width:38%">Nama Dokumen</th>
           <th style="width:14%">Kategori</th>
-          <th style="width:12%">Tarikh</th>
+          <th style="width:14%">Tarikh Kuatkuasa</th>
           <th style="width:8%">Versi</th>
-          <th style="width:28%">Tindakan</th>
+          <th style="width:26%">Tindakan</th>
         </tr></thead>
         <tbody>${[1,2,3,4,5].map(()=>`<tr>
           <td><div style="display:flex;align-items:center;gap:14px;">
@@ -161,9 +155,9 @@
             </div>
           </div></td>
           <td><div class="skeleton sk-text" style="width:80px;"></div></td>
-          <td><div class="skeleton sk-text" style="width:65px;"></div></td>
+          <td><div class="skeleton sk-text" style="width:90px;"></div></td>
           <td><div class="skeleton sk-text" style="width:42px;"></div></td>
-          <td><div class="skeleton sk-text" style="width:110px;height:32px;border-radius:3px;"></div></td>
+          <td><div class="skeleton sk-text" style="width:120px;height:34px;border-radius:3px;"></div></td>
         </tr>`).join('')}</tbody>
       </table>
     </div>
@@ -192,6 +186,10 @@ function parseCSV(text){
 function getIconClass(n){n=(n||'').toLowerCase();if(n.includes('pdf'))return 'icon-pdf';if(n.includes('xls'))return 'icon-xls';if(n.includes('doc'))return 'icon-doc';return 'icon-default';}
 function getIconLabel(n){n=(n||'').toLowerCase();if(n.includes('pdf'))return 'PDF';if(n.includes('xls'))return 'XLS';if(n.includes('doc'))return 'DOC';return 'FAIL';}
 
+function getTarikh(d){
+  return d['tarikh kuatkuasa'] || d['tarikh'] || '—';
+}
+
 function buildSidebar(docs){
   const cats={};
   docs.forEach(d=>{const c=d.kategori||'Lain-lain';cats[c]=(cats[c]||0)+1;});
@@ -218,9 +216,9 @@ function renderTable(docs){
   wrap.innerHTML=`<table class="doc-table"><thead><tr>
     <th style="width:38%">Nama Dokumen</th>
     <th style="width:14%">Kategori</th>
-    <th style="width:12%">Tarikh</th>
+    <th style="width:14%">Tarikh Kuatkuasa</th>
     <th style="width:8%">Versi</th>
-    <th style="width:28%">Tindakan</th>
+    <th style="width:26%">Tindakan</th>
   </tr></thead><tbody>${docs.map((d,i)=>`
     <tr class="doc-row" style="animation-delay:${i*0.03}s">
       <td><div class="doc-cell-main">
@@ -228,7 +226,7 @@ function renderTable(docs){
         <div><div class="doc-name">${d.nama||'—'}</div><div class="doc-code">${d.kod||''}</div></div>
       </div></td>
       <td><div class="doc-category">${d.kategori||'—'}</div></td>
-      <td><div class="doc-date">${d.tarikh||'—'}</div></td>
+      <td><div class="doc-date">${getTarikh(d)}</div></td>
       <td><div class="doc-version">${d.versi||'—'}</div></td>
       <td><div class="doc-actions">${d.link
         ?`<a href="${d.link}" target="_blank" class="btn-action primary">⬇ Muat Turun</a><a href="${d.link}" target="_blank" class="btn-action">👁 Lihat</a>`
@@ -241,7 +239,11 @@ function applyFilters(){
   searchQ=document.getElementById('searchInput').value.toLowerCase();
   const filtered=allDocs.filter(d=>{
     const matchCat=!activeSidebar||(d.kategori||'')===activeSidebar;
-    const matchSearch=!searchQ||(d.nama||'').toLowerCase().includes(searchQ)||(d.kod||'').toLowerCase().includes(searchQ)||(d.kategori||'').toLowerCase().includes(searchQ);
+    const matchSearch=!searchQ||
+      (d.nama||'').toLowerCase().includes(searchQ)||
+      (d.kod||'').toLowerCase().includes(searchQ)||
+      (d.kategori||'').toLowerCase().includes(searchQ)||
+      (getTarikh(d)).toLowerCase().includes(searchQ);
     return matchCat&&matchSearch;
   });
   renderTable(filtered);
