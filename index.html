@@ -13,81 +13,82 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { width: 100%; background: #ffffff; }
-  body { font-family: 'DM Sans', sans-serif; color: var(--black); font-size: 15px; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--black); font-size: 17px; }
 
   /* Stats bar */
-  .stats-bar { display: flex; gap: 2.5rem; padding: 1rem 2rem; background: var(--black); width: 100%; }
-  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--white); }
-  .stat-label { font-size: 12px; color: var(--gray-3); letter-spacing: 0.04em; margin-top: 2px; }
-  .stat-divider { width: 1px; height: 28px; background: #2a2a2a; align-self: center; }
+  .stats-bar { display: flex; gap: 2.5rem; padding: 1.1rem 2rem; background: var(--black); width: 100%; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--white); }
+  .stat-label { font-size: 13px; color: var(--gray-3); letter-spacing: 0.04em; margin-top: 2px; }
+  .stat-divider { width: 1px; height: 32px; background: #2a2a2a; align-self: center; }
 
   /* Search */
-  .search-wrap { padding: 1rem 2rem; background: var(--gray-1); border-bottom: 1px solid var(--gray-2); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; width: 100%; }
-  .search-box { flex: 1; max-width: 440px; display: flex; align-items: center; gap: 10px; background: var(--white); border: 1px solid var(--gray-2); padding: 0 16px; height: 42px; border-radius: 3px; }
-  .search-box input { border: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--black); background: transparent; flex: 1; }
+  .search-wrap { padding: 1.1rem 2rem; background: var(--gray-1); border-bottom: 1px solid var(--gray-2); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; width: 100%; }
+  .search-box { flex: 1; max-width: 460px; display: flex; align-items: center; gap: 10px; background: var(--white); border: 1px solid var(--gray-2); padding: 0 16px; height: 46px; border-radius: 3px; }
+  .search-box input { border: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--black); background: transparent; flex: 1; }
   .search-box input::placeholder { color: var(--gray-3); }
   .filter-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
-  .tab { padding: 7px 16px; font-size: 13px; font-weight: 500; border: 1px solid var(--gray-2); background: var(--white); color: var(--gray-4); cursor: pointer; border-radius: 3px; transition: all 0.15s; }
+  .tab { padding: 9px 18px; font-size: 14px; font-weight: 500; border: 1px solid var(--gray-2); background: var(--white); color: var(--gray-4); cursor: pointer; border-radius: 3px; transition: all 0.15s; }
   .tab:hover { background: var(--gray-2); }
   .tab.active { background: var(--black); color: var(--white); border-color: var(--black); }
-  .refresh-btn { display: flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 13px; border: 1px solid var(--gray-2); background: var(--white); color: var(--gray-4); border-radius: 3px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.15s; }
+  .refresh-btn { display: flex; align-items: center; gap: 6px; padding: 9px 18px; font-size: 14px; font-weight: 500; border: 1px solid var(--gray-2); background: var(--white); color: var(--gray-4); border-radius: 3px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.15s; }
   .refresh-btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
-  .cache-badge { font-size: 11px; color: var(--gray-3); }
+  .cache-badge { font-size: 12px; color: var(--gray-3); }
   .cache-badge.fresh { color: #166534; }
 
   /* Layout */
-  .layout { display: grid; grid-template-columns: 240px 1fr; min-height: 500px; width: 100%; background: #ffffff; }
-  .sidebar { border-right: 1px solid var(--gray-2); padding: 1.75rem 0; background: #ffffff; }
-  .sidebar-heading { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-3); padding: 0 1.5rem; margin-bottom: 10px; font-weight: 500; }
-  .sidebar-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 1.5rem; font-size: 14px; color: var(--gray-4); cursor: pointer; border-left: 2px solid transparent; transition: all 0.15s; }
+  .layout { display: grid; grid-template-columns: 260px 1fr; min-height: 500px; width: 100%; background: #ffffff; }
+  .sidebar { border-right: 1px solid var(--gray-2); padding: 2rem 0; background: #ffffff; }
+  .sidebar-heading { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-3); padding: 0 1.5rem; margin-bottom: 10px; font-weight: 500; }
+  .sidebar-item { display: flex; align-items: center; justify-content: space-between; padding: 11px 1.5rem; font-size: 15px; color: var(--gray-4); cursor: pointer; border-left: 2px solid transparent; transition: all 0.15s; }
   .sidebar-item:hover { color: var(--black); background: var(--gray-1); }
   .sidebar-item.active { color: var(--black); font-weight: 500; border-left-color: var(--red); background: var(--gray-1); }
-  .sidebar-count { font-size: 12px; color: var(--gray-3); background: var(--gray-1); padding: 2px 8px; border-radius: 10px; }
+  .sidebar-count { font-size: 13px; color: var(--gray-3); background: var(--gray-1); padding: 2px 9px; border-radius: 10px; }
 
   /* Content */
-  .content { padding: 1.75rem 2.5rem; background: #ffffff; }
+  .content { padding: 2rem 2.5rem; background: #ffffff; }
   .content-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-2); }
-  .content-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--black); }
-  .content-count { font-size: 13px; color: var(--gray-3); }
+  .content-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; color: var(--black); }
+  .content-count { font-size: 14px; color: var(--gray-3); }
 
   /* Table */
   .doc-table { width: 100%; border-collapse: collapse; background: #ffffff; }
-  .doc-table th { text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-3); font-weight: 500; padding: 0 14px 12px; border-bottom: 1px solid var(--gray-2); }
+  .doc-table th { text-align: left; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-3); font-weight: 500; padding: 0 14px 14px; border-bottom: 1px solid var(--gray-2); }
   .doc-table th:first-child { padding-left: 0; }
-  .doc-row { border-bottom: 1px solid var(--gray-2); cursor: pointer; transition: background 0.12s; animation: fadeUp 0.25s ease both; }
+  .doc-row { border-bottom: 1px solid var(--gray-2); transition: background 0.12s; animation: fadeUp 0.25s ease both; }
   .doc-row:hover { background: var(--gray-1); }
   .doc-row:last-child { border-bottom: none; }
-  .doc-row td { padding: 14px; vertical-align: middle; }
+  .doc-row td { padding: 16px 14px; vertical-align: middle; }
   .doc-row td:first-child { padding-left: 0; }
   .doc-cell-main { display: flex; align-items: center; gap: 14px; }
-  .doc-icon { width: 38px; height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; }
+  .doc-icon { width: 42px; height: 42px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; }
   .icon-pdf { background: #fef2f2; color: var(--red); border: 1px solid #fecaca; }
   .icon-doc { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
   .icon-xls { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
   .icon-default { background: var(--gray-1); color: var(--gray-4); border: 1px solid var(--gray-2); }
-  .doc-name { font-size: 14px; font-weight: 500; color: var(--black); line-height: 1.4; }
-  .doc-code { font-size: 12px; color: var(--gray-3); margin-top: 3px; }
-  .doc-category { font-size: 13px; color: var(--gray-4); }
-  .doc-date { font-size: 13px; color: var(--gray-3); }
-  .doc-version { font-size: 12px; color: var(--gray-4); background: var(--gray-1); border: 1px solid var(--gray-2); padding: 3px 10px; border-radius: 3px; font-family: monospace; }
-  .doc-actions { display: flex; gap: 6px; opacity: 0; transition: opacity 0.15s; }
-  .doc-row:hover .doc-actions { opacity: 1; }
-  .btn-action { display: flex; align-items: center; gap: 4px; padding: 6px 12px; font-size: 12px; font-weight: 500; border-radius: 3px; cursor: pointer; border: 1px solid var(--gray-2); background: var(--white); color: var(--gray-4); transition: all 0.12s; font-family: 'DM Sans', sans-serif; text-decoration: none; }
+  .doc-name { font-size: 15px; font-weight: 500; color: var(--black); line-height: 1.4; }
+  .doc-code { font-size: 13px; color: var(--gray-3); margin-top: 3px; }
+  .doc-category { font-size: 14px; color: var(--gray-4); }
+  .doc-date { font-size: 14px; color: var(--gray-3); }
+  .doc-version { font-size: 13px; color: var(--gray-4); background: var(--gray-1); border: 1px solid var(--gray-2); padding: 4px 10px; border-radius: 3px; font-family: monospace; }
+
+  /* Butang muat turun — sentiasa nampak */
+  .doc-actions { display: flex; gap: 8px; }
+  .btn-action { display: flex; align-items: center; gap: 5px; padding: 7px 14px; font-size: 13px; font-weight: 500; border-radius: 3px; cursor: pointer; border: 1px solid var(--gray-2); background: var(--white); color: var(--gray-4); transition: all 0.12s; font-family: 'DM Sans', sans-serif; text-decoration: none; }
   .btn-action:hover { background: var(--black); color: var(--white); border-color: var(--black); }
   .btn-action.primary { background: var(--red); color: var(--white); border-color: var(--red); }
   .btn-action.primary:hover { background: var(--red-dark); }
 
   /* Skeleton */
   .skeleton { background: linear-gradient(90deg, var(--gray-2) 25%, var(--gray-1) 50%, var(--gray-2) 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: 3px; }
-  .sk-icon { width: 38px; height: 38px; border-radius: 4px; flex-shrink: 0; }
-  .sk-text { height: 13px; border-radius: 2px; }
+  .sk-icon { width: 42px; height: 42px; border-radius: 4px; flex-shrink: 0; }
+  .sk-text { height: 15px; border-radius: 2px; }
   @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
   .state-box { display: flex; flex-direction: column; align-items: center; padding: 3rem 2rem; gap: 12px; }
-  .state-title { font-size: 15px; font-weight: 500; color: var(--gray-4); }
-  .state-sub { font-size: 13px; color: var(--gray-3); text-align: center; }
-  .sk-sidebar { padding: 0 1.5rem; display: flex; justify-content: space-between; margin-bottom: 8px; }
+  .state-title { font-size: 16px; font-weight: 500; color: var(--gray-4); }
+  .state-sub { font-size: 14px; color: var(--gray-3); text-align: center; }
+  .sk-sidebar { padding: 11px 1.5rem; display: flex; justify-content: space-between; }
 </style>
 </head>
 <body>
@@ -111,15 +112,15 @@
 
 <div class="search-wrap">
   <div class="search-box">
-    <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" style="color:#9e9c96;flex-shrink:0;"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/></svg>
+    <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" style="color:#9e9c96;flex-shrink:0;"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/></svg>
     <input type="text" id="searchInput" placeholder="Cari dokumen, kod, atau kategori..." oninput="applyFilters()">
   </div>
   <div class="filter-tabs" id="filterTabs">
     <div class="tab active" onclick="setTabFilter('',this)">Semua</div>
   </div>
   <button class="refresh-btn" onclick="forceRefresh()">
-    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
-    Muat Semula
+    <svg viewBox="0 0 20 20" fill="currentColor" width="15" height="15"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
+    Refresh
   </button>
   <span class="cache-badge" id="cacheBadge"></span>
 </div>
@@ -131,9 +132,9 @@
       Semua Dokumen <span class="sidebar-count" id="count-all">—</span>
     </div>
     <div id="sidebarCats">
-      <div class="sk-sidebar"><div class="skeleton sk-text" style="width:65%;"></div><div class="skeleton sk-text" style="width:24px;"></div></div>
-      <div class="sk-sidebar"><div class="skeleton sk-text" style="width:50%;"></div><div class="skeleton sk-text" style="width:24px;"></div></div>
-      <div class="sk-sidebar"><div class="skeleton sk-text" style="width:70%;"></div><div class="skeleton sk-text" style="width:24px;"></div></div>
+      <div class="sk-sidebar"><div class="skeleton sk-text" style="width:65%;"></div><div class="skeleton sk-text" style="width:28px;"></div></div>
+      <div class="sk-sidebar"><div class="skeleton sk-text" style="width:50%;"></div><div class="skeleton sk-text" style="width:28px;"></div></div>
+      <div class="sk-sidebar"><div class="skeleton sk-text" style="width:70%;"></div><div class="skeleton sk-text" style="width:28px;"></div></div>
     </div>
   </div>
 
@@ -145,24 +146,24 @@
     <div id="tableWrap">
       <table class="doc-table">
         <thead><tr>
-          <th style="width:42%">Nama Dokumen</th>
-          <th style="width:16%">Kategori</th>
-          <th style="width:14%">Tarikh</th>
-          <th style="width:10%">Versi</th>
-          <th style="width:18%"></th>
+          <th style="width:38%">Nama Dokumen</th>
+          <th style="width:14%">Kategori</th>
+          <th style="width:12%">Tarikh</th>
+          <th style="width:8%">Versi</th>
+          <th style="width:28%">Tindakan</th>
         </tr></thead>
         <tbody>${[1,2,3,4,5].map(()=>`<tr>
           <td><div style="display:flex;align-items:center;gap:14px;">
             <div class="skeleton sk-icon"></div>
             <div style="flex:1;">
-              <div class="skeleton sk-text" style="width:72%;margin-bottom:7px;"></div>
-              <div class="skeleton sk-text" style="width:32%;height:11px;"></div>
+              <div class="skeleton sk-text" style="width:72%;margin-bottom:8px;"></div>
+              <div class="skeleton sk-text" style="width:32%;height:12px;"></div>
             </div>
           </div></td>
           <td><div class="skeleton sk-text" style="width:80px;"></div></td>
           <td><div class="skeleton sk-text" style="width:65px;"></div></td>
           <td><div class="skeleton sk-text" style="width:42px;"></div></td>
-          <td></td>
+          <td><div class="skeleton sk-text" style="width:110px;height:32px;border-radius:3px;"></div></td>
         </tr>`).join('')}</tbody>
       </table>
     </div>
@@ -210,10 +211,16 @@ function buildSidebar(docs){
 function renderTable(docs){
   const wrap=document.getElementById('tableWrap');
   document.getElementById('content-count').textContent=docs.length+' dokumen';
-  if(docs.length===0){wrap.innerHTML=`<div class="state-box"><div style="font-size:32px;">📂</div><div class="state-title">Tiada dokumen dijumpai</div><div class="state-sub">Cuba ubah carian atau pilih kategori lain</div></div>`;return;}
+  if(docs.length===0){
+    wrap.innerHTML=`<div class="state-box"><div style="font-size:36px;">📂</div><div class="state-title">Tiada dokumen dijumpai</div><div class="state-sub">Cuba ubah carian atau pilih kategori lain</div></div>`;
+    return;
+  }
   wrap.innerHTML=`<table class="doc-table"><thead><tr>
-    <th style="width:42%">Nama Dokumen</th><th style="width:16%">Kategori</th>
-    <th style="width:14%">Tarikh</th><th style="width:10%">Versi</th><th style="width:18%"></th>
+    <th style="width:38%">Nama Dokumen</th>
+    <th style="width:14%">Kategori</th>
+    <th style="width:12%">Tarikh</th>
+    <th style="width:8%">Versi</th>
+    <th style="width:28%">Tindakan</th>
   </tr></thead><tbody>${docs.map((d,i)=>`
     <tr class="doc-row" style="animation-delay:${i*0.03}s">
       <td><div class="doc-cell-main">
@@ -224,8 +231,8 @@ function renderTable(docs){
       <td><div class="doc-date">${d.tarikh||'—'}</div></td>
       <td><div class="doc-version">${d.versi||'—'}</div></td>
       <td><div class="doc-actions">${d.link
-        ?`<a href="${d.link}" target="_blank" class="btn-action primary">Muat Turun</a><a href="${d.link}" target="_blank" class="btn-action">Lihat</a>`
-        :`<span style="font-size:12px;color:var(--gray-3)">Tiada pautan</span>`
+        ?`<a href="${d.link}" target="_blank" class="btn-action primary">⬇ Muat Turun</a><a href="${d.link}" target="_blank" class="btn-action">👁 Lihat</a>`
+        :`<span style="font-size:13px;color:var(--gray-3)">Tiada pautan</span>`
       }</div></td>
     </tr>`).join('')}</tbody></table>`;
 }
@@ -287,7 +294,7 @@ async function fetchFromNetwork(silent=false){
     allDocs=docs;buildSidebar(allDocs);applyFilters();setCacheBadge(false);
   }catch(e){
     if(!silent){
-      document.getElementById('tableWrap').innerHTML=`<div class="state-box"><div style="font-size:32px;">⚠️</div><div class="state-title">Gagal memuatkan data</div><div class="state-sub">Pastikan Google Sheets dah di-publish.<br>Klik "Muat Semula" untuk cuba lagi.</div></div>`;
+      document.getElementById('tableWrap').innerHTML=`<div class="state-box"><div style="font-size:36px;">⚠️</div><div class="state-title">Gagal memuatkan data</div><div class="state-sub">Pastikan Google Sheets dah di-publish.<br>Klik "Refresh" untuk cuba lagi.</div></div>`;
       document.getElementById('content-count').textContent='Ralat';
     }
   }
